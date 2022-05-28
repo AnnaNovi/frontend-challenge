@@ -30,3 +30,27 @@
 - реализация адаптивности будет плюсом, но не обязательна
 - бесконечная прокрутка будет плюсом, но не обязательна
 - можно использовать любой фреймворк включая vanilla.js
+# uchi-ru
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
