@@ -63,6 +63,16 @@ export const favoritesCats = {
       hasCat
         ? dispatch("removeFavoriteCat", cat.id)
         : dispatch("addFavoriteCat", cat);
+      localStorage.setItem(
+        "favoriteCatsList",
+        JSON.stringify([...state.favoritesCats])
+      );
+    },
+    checkFavoriteCat(
+      { state }: ActionContext<favoritesCatsStateType, RootState>,
+      catId: string
+    ) {
+      return state.favoritesCats.has(catId);
     },
     getFavoriteCatsFromLocalStorage({
       commit,
