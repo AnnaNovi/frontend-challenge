@@ -1,6 +1,6 @@
 <template>
-  <div class="favorite">
-    <h1>This is a favorite page</h1>
+  <div :class="$style.catCard">
+    <img src="" alt="" />
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "FavoriteView",
+  name: "CatCard",
 });
 </script>
 
