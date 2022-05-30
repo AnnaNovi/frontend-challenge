@@ -7,15 +7,23 @@
 </template>
 
 <style lang="scss">
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 #app {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
-
 nav {
   padding: 23px 62px;
   background: #2196f3;
