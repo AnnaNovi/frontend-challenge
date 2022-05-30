@@ -21,7 +21,20 @@ export const favoritesCats = {
   }),
   getters: {
     favoritesCats(state: favoritesCatsStateType) {
-      return state.favoritesCats;
+      const favoritesArray = state.favoritesCats.entries();
+      const catArray: catsType[] = [];
+      for (const entry of favoritesArray) {
+        const [id, { categorieName, url }] = entry;
+        const catObject = {
+          id: id,
+          categorieName: categorieName,
+          url: url,
+        };
+        catArray.push(catObject);
+      }
+      if (catArray.length) {
+        return catArray;
+      }
     },
   },
   mutations: {

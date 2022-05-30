@@ -25,9 +25,10 @@ body {
   font-weight: 400;
 }
 nav {
-  padding: 23px 62px;
+  padding: 0 62px;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+  display: flex;
 
   a {
     font-size: 14px;
