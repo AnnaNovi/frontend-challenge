@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div :class="$style.catsBlock">
+    <CatBlock>
       <CatCard
         v-for="cat in allCats"
         :key="cat.id"
         :cat="cat"
         @imageLoaded="whenImageLoaded"
       />
-    </div>
+    </CatBlock>
     <div :class="$style.loadMore" ref="loadMoreCats" v-show="isImagesLoaded">
       ... загружаем еще котиков ...
     </div>
@@ -18,12 +18,7 @@
 import { defineComponent } from "vue";
 import { mapActions, mapGetters } from "vuex";
 import CatCard from "../components/CatCard.vue";
-
-interface catsType {
-  id: string;
-  categorieName: string | null;
-  url: string;
-}
+import CatBlock from "../components/CatBlock.vue";
 
 export default defineComponent({
   name: "HomeView",
@@ -35,6 +30,7 @@ export default defineComponent({
   },
   components: {
     CatCard,
+    CatBlock,
   },
   computed: {
     ...mapGetters(["allCats", "allCatsSize", "allCatsLimit"]),
@@ -84,13 +80,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" module>
-.catsBlock {
-  padding: 48px 62px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: 16px;
-  row-gap: 20px;
-}
 .loadMore {
   font-size: 14px;
   line-height: 21px;
